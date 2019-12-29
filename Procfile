@@ -1,1 +1,2 @@
-web: java -Dserver.port=$PORT -jar target/stockset-1.0.0.jar --spring.datasource.url=${JDBC_DATABASE_URL}
+web: java -jar target/*.jar
+release: ./mvnw liquibase:update
