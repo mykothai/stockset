@@ -84,12 +84,11 @@
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<changeLogFile>src/main/resources/db/changelog/db.changelog-master.yaml</changeLogFile>
+					<!--<changeLogFile>src/main/resources/db/changelog/db.changelog-master.yaml</changeLogFile>-->
 					<!--<url>${env.JDBC_DATABASE_URL}</url>-->
 					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
-					<driver>org.postgresql.Driver</driver>
-					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+					<!--<driver>org.postgresql.Driver</driver>-->
 				</configuration>
 			</plugin>
 		</plugins>
