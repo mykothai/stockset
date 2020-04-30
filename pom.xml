@@ -37,6 +37,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<version>9.4.1212</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -86,7 +87,9 @@
 					<changeLogFile>src/main/resources/db/changelog/db.changelog-master.yaml</changeLogFile>
 					<!--<url>${env.JDBC_DATABASE_URL}</url>-->
 					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
-					<propertyFile>liquibase.properties</propertyFile>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<driver>org.postgresql.Driver</driver>
+					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 				</configuration>
 			</plugin>
 		</plugins>
