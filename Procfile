@@ -1,2 +1,2 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/stockset-0.0.1-SNAPSHOT.jar --spring.datasource.url=${JDBC_DATABASE_URL}
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar --spring.datasource.url=${JDBC_DATABASE_URL}
 release: java -jar target/dependency/liquibase.jar --changeLogFile=src/main/resources/db/changelog/db.changelog-master.yaml --url=$JDBC_DATABASE_URL --classpath=target/dependency/postgres.jar update
